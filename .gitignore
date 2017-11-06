@@ -4,5 +4,4 @@
 *pyc
 *.sqlite3
 __pycache__
-staticfiles
 staticfiles/
