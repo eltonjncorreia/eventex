@@ -2,7 +2,7 @@ SECRET_KEY=THIS_IS_NOT_SECRETY
 DEBUG=True
 ALLOWED_HOSTS=127.0.0.1, .localhost, .heroku.com
 
-EMAIL_BACKEND=django.core.mail.backends.smtp.EmailBackend
+EMAIL_BACKEND=django.core.mail.backends.console.EmailBackend
 EMAIL_HOST=localhost
 EMAIL_PORT=25
 EMAIL_USE_TLS=False
