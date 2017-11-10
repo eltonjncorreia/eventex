@@ -4,5 +4,5 @@
 *pyc
 *.sqlite3
 __pycache__
-/staticfiles
 .ipynb_checkpoints
+staticfiles
