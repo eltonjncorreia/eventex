@@ -89,7 +89,3 @@ class SubscribePostInvalid(TestCase):
         self.assertFalse(Subscription.objects.exists())
 
 
-class SubscriptionDetailNotFound(TestCase):
-    def test_not_found(self):
-        resp = self.client.get('/inscricao/0/')
-        self.assertEqual(404, resp.status_code)
