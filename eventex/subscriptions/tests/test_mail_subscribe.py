@@ -1,12 +1,13 @@
 from django.core import mail
 from django.test import TestCase
+from django.shortcuts import resolve_url as r
 
 class SubsribePostValid(TestCase):
     def setUp(self):
         """ verify POST should """
         data = dict(name="Henrique Bastos", phone="12345678901",
                     email="henrique@bastos.net", cpf="12345678901")
-        self.response = self.client.post('/inscricao/', data)
+        self.response = self.client.post(r('subscriptions:new'), data)
         self.email = mail.outbox[0]
 
     def test_subscription_email_subject(self):
