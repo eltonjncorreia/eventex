@@ -53,6 +53,7 @@ class SubscriptionsNewPostValid(TestCase):
         """ verify POST should """
         data = dict(name="Henrique Bastos", phone="12345678901",
                     email="henrique@bastos.net", cpf="12345678901")
+
         self.response = self.client.post(r('subscriptions:new'), data)
 
     def test_post(self):
