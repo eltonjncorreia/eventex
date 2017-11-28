@@ -6,9 +6,11 @@ from eventex.subscriptions.admin import SubscriptionModelAdmin, Subscription, ad
 
 class SubscriptionModelAdminTest(TestCase):
     def setUp(self):
+        '''criar um linha no banco de dados'''
         Subscription.objects.create(name='Elton', cpf='12345678901',
                                     phone='12345', email='elton@elton.com')
 
+        '''instancia um objeto'''
         self.model_admin = SubscriptionModelAdmin(Subscription, admin.site)
 
 
