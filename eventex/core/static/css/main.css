@@ -1,22 +1,4 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Marketplace
-Explore
- @eltonjncorreia
- Sign out
- Watch 1
-  Star 0
-  Fork 0 danielbruno301/wttd-eventex
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights
-Branch: master Find file Copy pathwttd-eventex/eventex/core/static/css/main.css
-6cbb55e  8 days ago
- Daniel Costa Refactora geral
-1 contributor
-RawBlameHistory    
-Executable File  367 lines (291 sloc)  7.75 KB
+
 /* Customização */
 
 @font-face {
@@ -230,7 +212,7 @@ section header h2 {
 #top {
     display:table;
     width:100%;
-    max-height: auto;
+    min-height: auto;
     height:600px;
     background:url(../img/top-bg.jpg) bottom center no-repeat;
     -webkit-background-size: cover;
