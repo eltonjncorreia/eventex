@@ -370,6 +370,11 @@ section header h2 {
 }
 
 .speakers img{
-    width: 100px;
+    width: 150px;
     border-radius: 100%;
+}
+
+.speakers img.photo{
+    float: left;
+    padding-right: 15px;
 }
