@@ -3,7 +3,7 @@
     "model": "core.speaker",
     "pk": 1,
     "fields": {
-        "name": "Grace-Hopper",
+        "name": "Grace Hopper",
         "slug": "grace-hopper",
         "website": "http://hbn.link/hopper-site",
         "photo": "http://hbn.link/hopper-pic",
