@@ -44,6 +44,9 @@ INSTALLED_APPS = (
     'eventex.subscriptions.apps.SubscriptionsConfig',
 )
 
+
+
+
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
