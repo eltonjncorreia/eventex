@@ -1,6 +1,7 @@
 from django.db import models
 from django.shortcuts import resolve_url as r
 
+
 # Create your models here.
 class Speaker(models.Model):
     name = models.CharField('Nome', max_length=100)
@@ -11,7 +12,7 @@ class Speaker(models.Model):
 
     class Meta:
         verbose_name = 'Palestrante'
-        verbose_name_plural ='Palestrantes'
+        verbose_name_plural = 'Palestrantes'
 
     def __str__(self):
         return self.name
