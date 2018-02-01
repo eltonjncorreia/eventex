@@ -27,10 +27,10 @@ class ContactModelTest(TestCase):
         contact = Contact.objects.create(
             speaker=self.speaker,
             kind=Contact.PHONE,
-            value='21-996186180'
+            value='21-99999999'
         )
 
-        self.assertTrue(Contact.objects.exists())
+        self.assertTrue(contact.objects.exists())
 
 
     def test_choices(self):
@@ -47,7 +47,6 @@ class ContactModelTest(TestCase):
         self.assertEqual('henrique@bastos.net', str(contact))
 
 
-
 class ContactManageTest(TestCase):
     def setUp(self):
         s = Speaker.objects.create(name='Henrique Bastos',
@@ -62,7 +61,7 @@ class ContactManageTest(TestCase):
         expected = ['henrique@bastos.net']
         self.assertQuerysetEqual(qs, expected, lambda o: o.value)
 
-    def test_phone(self):
+    def test_phones(self):
         qs = Contact.objects.phones()
         expected =['21-99999999']
         self.assertQuerysetEqual(qs, expected, lambda o: o.value)

@@ -1,9 +1,8 @@
 from django.db import models
 from django.shortcuts import resolve_url as r
 
-
 # Create your models here.
-from eventex.core.managers import EmailContactManager, PhoneContactManager
+from eventex.core.managers import KindQuerySet, PeriodManager
 
 
 class Speaker(models.Model):
@@ -35,9 +34,7 @@ class Contact(models.Model):
     kind = models.CharField(max_length=1, choices=kINDS)
     value = models.CharField(max_length=255)
 
-    object = models.Manager()
-    emails = EmailContactManager()
-    phones = PhoneContactManager()
+    object = KindQuerySet.as_manager()
 
 
     class Meta:
@@ -53,6 +50,8 @@ class Talk(models.Model):
     start = models.TimeField('inicio', blank=True, null=True)
     description = models.TextField('descricao', blank=True)
     speakers = models.ManyToManyField('Speaker', blank=True, verbose_name='palestrantes')
+
+    objects = PeriodManager()
 
     class Meta:
         verbose_name = 'Talk'
